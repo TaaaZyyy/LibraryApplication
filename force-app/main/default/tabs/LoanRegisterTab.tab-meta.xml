@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>図書館スタッフ用貸出記録登録画面</description>
+    <label>貸出記録</label>
+    <lwcComponent>loanRegister</lwcComponent>
+    <motif>Custom83: Pencil</motif>
+</CustomTab>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="boatMap">
+    <apiVersion>54.0</apiVersion>
+    <masterLabel>貸出記録</masterLabel>
+    <description>図書館スタッフ用貸出記録登録画面</description>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__Tab</target>
+    </targets>
+</LightningComponentBundle>

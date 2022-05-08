@@ -1,0 +1,48 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="small" variant="brand"></lightning-spinner>
+    </template>
+    <template if:false={isCompleted}>
+        <lightning-card title="貸出の記録 " icon-name="custom:custom83">
+            <div class="slds-p-horizontal_small my-card">
+                <template if:true={error}>
+                    <c-error-panel errors={error}></c-error-panel>
+                </template>
+                <lightning-input
+                    name="memberNumber"
+                    type="text"
+                    label="会員番号"
+                    placeholder="1,2など"
+                    onchange={handleChange}
+                    required
+                ></lightning-input>
+                <lightning-input
+                    name="itemNumber"
+                    type="text"
+                    label="所蔵品番号"
+                    placeholder="1-A,2-Aなど"
+                    onchange={handleChange}
+                    required
+                ></lightning-input>
+                <lightning-input
+                    name="loanDate"
+                    type="date"
+                    label="貸出日"
+                    value={loanRequest.loanDate}
+                    onchange={handleChange}
+                    required
+                ></lightning-input>
+            </div>
+            <div slot="footer">
+                <lightning-button type="submit" label="登録" onclick={doRegister}></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:true={isCompleted}>
+        <lightning-card title="貸出完了" icon-name="custom:custom83">
+            <div class="slds-p-horizontal_small">
+                <p>貸出番号：{loanRequest.memberNumber}の貸出を登録しました。</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

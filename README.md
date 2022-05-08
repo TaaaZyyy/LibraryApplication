@@ -1,4 +1,5 @@
 # 図書館システム
+![sample](.pic/sample001.png)
 
 - [現場で役立つシステム設計の原則](https://www.amazon.co.jp/dp/477419087X)に沿った開発をSalesforceプラットフォーム上で実現する試み。
 - [system-sekkei/library](https://github.com/system-sekkei/library)を題材として使用。
